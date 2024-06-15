@@ -4,7 +4,7 @@
   "description": "fetch data from url store in mongodb",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "start": "nodemon index.js",
     "build": "npm i"
   },
   "author": "code",
