@@ -1,0 +1,20 @@
+{
+  "name": "rox-backend",
+  "version": "1.0.0",
+  "description": "fetch data from url store in mongodb",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "npm i"
+  },
+  "author": "code",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.0"
+  }
+}
