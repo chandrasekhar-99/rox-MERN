@@ -21,7 +21,7 @@ const BarChart = (props)=> {
 
     useEffect(() => {
 
-        const apiUrl = `http://localhost:8000/rox-api?month=${setMonth}`
+        const apiUrl = `http://localhost:8000/api/rox-api?month=${setMonth}`
     
         const fetchData = async () => {
           try {
