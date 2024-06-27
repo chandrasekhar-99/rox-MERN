@@ -7,10 +7,11 @@ const RoxDataSchema = new mongoose.Schema({
     description:{type: String, required: true},
     category:{type: String, required: true},
     image:{type: String, required: true},
-    sold:{type: Boolean},
+    sold:{type: Boolean, default: false},
     dateOfSale: { type: Date, required: true }
 	
 });
 
+const transactionModule = mongoose.model('roxColl',RoxDataSchema);
 
-module.exports = mongoose.model('roxColl',RoxDataSchema);
+module.exports = transactionModule;
