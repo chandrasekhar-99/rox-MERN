@@ -301,7 +301,7 @@ const pieChart = async (req,res)=>{
 //combined data of  3 APIs
 //localhost:8000/rox-api?month=november
 
-const roxCombined = async (req,res)=> {
+const roxApi = async (req,res)=> {
     const {month} = req.query;
     try{
         const [statistics, barData, pieData] = await Promise.all([
@@ -325,5 +325,5 @@ const roxCombined = async (req,res)=> {
 
 
 module.exports = {
-    initialize,transactions,search,statistics,barChart,pieChart,roxCombined
+    initialize,transactions,search,statistics,barChart,pieChart,roxApi
 }

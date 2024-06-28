@@ -1,22 +1,16 @@
-const dotenv = require('dotenv')
-dotenv.config();
 const express = require('express');
-
+const bodyParser = require("body-parser");
+const dotenv = require('dotenv')
 const cors = require('cors');
 const dbConnect = require('./config/config');
 const transactionRouter = require('./routes/apiRoutes');
 
+dotenv.config();
+dbConnect();
+
 const app = express();
-app.use(express.json());
-
-
-app.use(
-    cors({
-        origin:"*",
-    })
-)
-
-let PORT = process.env.PORT || 8001;
+app.use(bodyParser.json());
+app.use(cors());
 
 
 app.get("/", (req, res) => {
@@ -26,14 +20,10 @@ app.get("/", (req, res) => {
 app.use('/api', transactionRouter);
 
 
+const PORT = process.env.PORT || 8001;
 
-app.listen(PORT, async ()=>{
-    try{
-        await dbConnect;
-        console.log("connect to mongodb");
-
-    }catch(error){
-        console.log(error);
+app.listen(PORT, (error) =>{
+    if(!error){
+        console.log("rox server is running on port", PORT)
     }
-    console.log("rox server is running on port", PORT)
 })
