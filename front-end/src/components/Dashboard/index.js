@@ -25,7 +25,7 @@ const Dashboard = ()=>{
 
   useEffect(() => {
 
-    const apiUrl = `https://rox-mern.onrender.com/api/transactions/search?searchKey=${selectTransaction}&page=${pageNum}`
+    const apiUrl = `http://localhost:8000/api/transactions/search?searchKey=${selectTransaction}&page=${pageNum}`
 
     const fetchData = async () => {
       try {

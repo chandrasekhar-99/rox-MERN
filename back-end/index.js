@@ -22,8 +22,6 @@ app.use('/api', transactionRouter);
 
 const PORT = process.env.PORT || 8001;
 
-app.listen(PORT, (error) =>{
-    if(!error){
-        console.log("rox server is running on port", PORT)
-    }
+app.listen(PORT, () =>{
+    console.log("rox server is running on port", PORT)
 })
