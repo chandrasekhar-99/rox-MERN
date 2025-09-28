@@ -41,12 +41,23 @@ const Statistics = (props)=> {
     const statData = statDataTransaction.statisticsData;
 
     return(
-        <div>
-          <h2>Statistics - {setMonth}</h2>
-          <p>Total Sale:{statData.uniqueSale}</p>
-          <p>Total Sold Item:{statData.uniqueSoldData}</p>
-          <p>Total Not Sold Item:{statData.uniqueNoSoldData}</p>
+      <>
+        <h2>Statistics - {setMonth}</h2>
+        <div className='stat-container'>
+          <div className='stat-data-row'>
+            <span className='stat-data'>Total Sale:</span>
+            <span className='stat-data-value'>{statData.uniqueSale}</span>
+          </div>
+          <div className='stat-data-row'>
+            <span className='stat-data'>Total Sold Item:</span>
+            <span className='stat-data-value'>{statData.uniqueSoldData}</span>
+          </div>
+          <div className='stat-data-row'>
+            <span className='stat-data'>Total Not Sold Item:</span>
+            <span className='stat-data-value'>{statData.uniqueNoSoldData}</span>
+          </div>
         </div>
+      </>
     )
 }
 

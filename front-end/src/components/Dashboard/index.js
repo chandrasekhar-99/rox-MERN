@@ -103,11 +103,11 @@ const Dashboard = ()=>{
     return(
       <div className="dashboard-container">
         <div className="heading-container">
-            <p>
-            Transaction
-            <br/>
-            Dashboard
-            </p>
+                <p>
+                Transaction
+                <br/>
+                Dashboard
+                </p>
         </div>
         <div className='select-container'>
           
@@ -134,9 +134,10 @@ const Dashboard = ()=>{
         </div>
 
         <Statistics setMonth = {selectedMonth}/>
-        <BarChart setMonth = {selectedMonth}/>
-        <PieChart setMonth = {selectedMonth}/>
-        
+        <div className='charts-container'>
+          <BarChart setMonth = {selectedMonth}/>
+          <PieChart setMonth = {selectedMonth}/>
+        </div>
       </div>
     )
   

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {initialize,transactions,search, statistics,barChart,pieChart,roxApi} = require('../controller/controller');
 
-router.get('/api/initializeDatabase',initialize);
+router.get('/initializeDatabase',initialize);
 router.get('/transactions',transactions);
 router.get('/transactions/search',search);
 router.get('/statistics',statistics);

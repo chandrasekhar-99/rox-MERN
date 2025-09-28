@@ -11,7 +11,7 @@ const initialize =  async (req, res) => {
         const jsonData = response.data;
 
        
-        await roxColl.insertMany(jsonData);
+        await roxColl.insertMany(jsonData, { ordered: false });
        
         res.send('Database initialized with seed data successfully!');
         
